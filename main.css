@@ -1,0 +1,38 @@
+.user_input {
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+button{
+    display: block;
+    width: 20%;
+    margin: auto;
+    box-shadow: 2px 2px #145;
+}
+label {
+    font-weight: bold;
+    display: flex;
+    float: left; 
+    clear: left;
+    width: 170px;
+    line-height: 25px;
+    border-bottom: 10px;
+}
+input {
+    border-radius: 7px;
+    height: 20px;
+    margin-left: auto;
+    border-bottom: px;
+    display: inline-block;
+    float: inherit;
+}
+#res_tab {
+    width: 100%;
+    padding: 5px;
+}
+.res_tr:nth-child(odd){
+    background-color: lightgray;   
+    width: 100%;
+    
+}
