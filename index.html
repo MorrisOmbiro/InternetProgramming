@@ -328,7 +328,7 @@
                     var tot_len = document.querySelector("#in3").value;
                     var tbl = document.querySelector("#res_tab");
                     var tr = document.createElement("tr");
-                    var td = document.createElement("td");
+                    //var td = document.createElement("td");
                     
                     if(min_length != null && min_length === "") {
                         alert("Please fill min_length input value");
@@ -362,13 +362,25 @@
                     for(var i =0 ; i < words.length; i++) 
                         len += words[i].length;
                     if(document.getElementById("num_sub").checked) {
-                        ret_val += words.join("          ");
-                        td.innerHTML = regexOnce_Num(ret_val) + "\t" + len;
+                        for(var i =0 ; i < words.length; i++) {
+                            ret_val = words[i];
+                            var td = document.createElement("td")
+                            td.innerHTML = regexOnce_Num(ret_val);
+                            tr.appendChild(td);
+                        }
+                        var td = document.createElement("td");
+                        td.innerHTML = len;
                         tr.appendChild(td);
                         tr.classList.add("res_tr");
                     }else {
-                        ret_val += words.join("          ");
-                        td.innerHTML = ret_val + "\t" + len;
+                        for(var i =0 ; i < words.length; i++) {
+                            ret_val = words[i];
+                            var td = document.createElement("td");
+                            td.innerHTML = ret_val;
+                            tr.appendChild(td);
+                        }
+                        var td = document.createElement("td");
+                        td.innerHTML = len;
                         tr.appendChild(td);
                         tr.classList.add("res_tr");
                     }
