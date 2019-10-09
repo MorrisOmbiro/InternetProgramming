@@ -36,8 +36,23 @@ input {
     display: inline-block;
     float: inherit;
 }
+h2 {
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-left: 75px;
+}
 .check_boxes {
     display: inline-block;
+}
+.check_label {
+    display: block;
+    width: inherit;
+}
+#error {
+    color: red;
+    font-family: sans-serif;
 }
 #res_tab {
     width: 100%;
